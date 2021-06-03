@@ -1,0 +1,13 @@
+{
+    "_template": "https://github.com/hackalog/easydata.git",
+    "author_name": "Easydata Team",
+    "conda_path": "~/miniconda3/bin/conda",
+    "default_branch": "main",
+    "description": "Demos, tutorials and examples for using easydata 2.0.",
+    "module_name": "easydata",
+    "open_source_license": "MIT",
+    "project_name": "Easydata 2.0 Demo",
+    "python_version": "3.7",
+    "repo_name": "easydata2_demo",
+    "upstream_location": "github.com"
+}
