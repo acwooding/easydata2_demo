@@ -2,6 +2,6 @@
 # DEBUG level.
 
 import logging
-from easydata.log import logger
+from src.log import logger
 
 logger.setLevel(logging.DEBUG)

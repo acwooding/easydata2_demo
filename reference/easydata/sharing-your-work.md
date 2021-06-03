@@ -31,7 +31,7 @@ When you are ready share your notebook or code with others, you'll be able to ti
 #### Notebooks and Code
 - [ ] Notebooks are in the `notebooks` directory following the [notebook naming convention](notebooks.md#naming-convention).
 - [ ] Notebooks load data via the `Dataset.load()` API to access an available Dataset.
-- [ ] Functions are in `easydata/user_name` and accessed in notebooks via something like `from easydata.user_name import my_function`. If you have  `def my_function` in your notebook or anything more elaborate, there's a good chance that it should be in the `easydata` module.
+- [ ] Functions are in `src/user_name` and accessed in notebooks via something like `from src.user_name import my_function`. If you have  `def my_function` in your notebook or anything more elaborate, there's a good chance that it should be in the `src` module.
 - [ ] Notebook cells run sequentially (i.e. **Kernel->Restart & Run All** runs to completion successfully).
 - [ ] *(Optional but generally recommended)*: All notebook cell output has been cleared before checking it in (i.e. **Kernel->Restart & Clear Output** before saving).
 
@@ -42,7 +42,7 @@ When you are ready share your notebook or code with others, you'll be able to ti
 - [ ] Share your conda environment. Check in your `environment.yml` file if you've made any changes.
   * If there's any chance that you added something to the conda environment needed to run your code that was **not** added via your `environment.yml` file as per [Setting up and Maintaining your Conda Environment (Reproducibly)](conda-environments.md), [delete your environment and recreate it](conda-environments.md#nuke-it-from-orbit).
 - [ ] *(Optional)* Make sure all tests pass (run `make test`). This will test all of the dataset integration so if you don't have a lot of room on your machine (as it will build all the the datasets if you haven't yet), you may want to skip this step.
-- [ ] At least, make sure all of the tests for your code pass. To subselect your tests you can run `pytest --pyargs easydata -k your_test_filename`.
+- [ ] At least, make sure all of the tests for your code pass. To subselect your tests you can run `pytest --pyargs src -k your_test_filename`.
 
 #### Final Checks
 - [ ] You've [merged the latest version](git-workflow.md) of `upstream/main` into your branch.
@@ -113,7 +113,7 @@ We're keen on sharing notebooks for sharing stories and analyses. Best practices
 
 * Follow the [notebook naming convention](notebooks.md#naming-convention)
 * Use the [`Dataset.load()` API](datasets.md) for accessing data
-* Put [code in the `easydata` module](notebooks.md#on-code) under `easydata/xyz` where `xyz` is your (the author's) initials (as in the notebook naming convention)
+* Put [code in the `src` module](notebooks.md#on-code) under `src/xyz` where `xyz` is your (the author's) initials (as in the notebook naming convention)
 * Run **Kernel->Restart & Run All** and optionally **Kernel->Restart & Clear Output** before saving and checking in your notebooks
 
 ## Quick Guide to Licenses

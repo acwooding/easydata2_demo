@@ -32,9 +32,9 @@ If you want to give your future users help to see whether they are getting image
 You can also optionally check your notebook in after a successful **Kernel->Restart & Run All**. This is a little more work to maintain diffs on, but can be nicer for communication withouit having to run a notebook to see what the results look like.
 
 ## On code
-As mentioned, notebooks aren't a great place for keeping code, as diffs and PRs in a notebook are virtually unreadable. This repo uses an editable python module called `easydata`. If you write code that you'd like to use in a notebook (e.g. `my_python_file.py`), put it in the `easydata/xyz` directory where `xyz` is the author's initials. You should then be able to immediately load it in your notebook via:
+As mentioned, notebooks aren't a great place for keeping code, as diffs and PRs in a notebook are virtually unreadable. This repo uses an editable python module called `src`. If you write code that you'd like to use in a notebook (e.g. `my_python_file.py`), put it in the `src/xyz` directory where `xyz` is the author's initials. You should then be able to immediately load it in your notebook via:
 ```python
-from easydata.xyz.my_python_file import my_function_name
+from src.xyz.my_python_file import my_function_name
 ```
 If it's not immediately loading (or you need to restart your kernel to make it visible), make sure you run the following cell (preferably at the top of your notebook...see more on useful header cells below):
 ```python
@@ -58,7 +58,7 @@ The cell
 %load_ext autoreload
 %autoreload 2
 ```
-let's you autoreload code that's changed in your environment. This means you can update your environment without killing your kernel or develop code in the `easydata` module that is immediately available via auto-reload.
+let's you autoreload code that's changed in your environment. This means you can update your environment without killing your kernel or develop code in the `src` module that is immediately available via auto-reload.
 #### Python Libraries
 It helps to put your dependencies at the top of your notebook. Ours usually look something like this:
 ```python
@@ -78,9 +78,9 @@ from bokeh.resources import INLINE
 output_notebook(resources=INLINE)
 
 # Source module imports
-from easydata import paths
-from easydata.data import DataSource, Dataset
-from easydata import workflow
+from src import paths
+from src.data import DataSource, Dataset
+from src import workflow
 ```
 You can also find most of these header cells in [00-xyz-sample-notebook.ipynb](../notebooks/00-xyz-sample-notebook.ipynb)
 

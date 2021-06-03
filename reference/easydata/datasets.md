@@ -3,13 +3,13 @@
 ## TL;DR
 To get started, all you really need to know is that you can query for available datasets via
 ```python
-from easydata import workflow
+from src import workflow
 workflow.dataset_catalog()
 ```
 
 and load these datasets via
 ```python
-from easydata.data import Dataset
+from src.data import Dataset
 ds = Dataset.load(dataset_name)
 ```
 
@@ -55,7 +55,7 @@ Under the hood, metadata is a dictionary; however metadata can also be accessed 
 ## Using a `Dataset`
 As mentioned before, to load a `Dataset`:
 ```python
-from easydata.data import Dataset
+from src.data import Dataset
 ds = Dataset.load("<dataset-name>")
 ```
 At this point, if you already have a cached copy of the desired `Dataset` on disk, it will load it. Otherwise, the it will follow the *recipe* for generating the requested `Dataset`; i.e. generate the dataset from raw data, as per the instructions contained in the `dataset_catalog` (described below).
@@ -83,7 +83,7 @@ While we do our best to keep the documentation in [Available Datasets](docs/avai
 To access the catalog:
 
 ```python
-from easydata import workflow
+from src import workflow
 workflow.dataset_catalog(keys_only=True)
 ```
 If you're interested, set `keys_only=False` to see the complete contents of the metadata that is saved in the catalog.

@@ -4,8 +4,8 @@ import pytest
 import shutil
 import tempfile as tf
 
-from easydata.log import logger
-import easydata.log.debug
+from src.log import logger
+import src.log.debug
 
 
 @pytest.fixture

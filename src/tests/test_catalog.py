@@ -1,8 +1,8 @@
 import pytest
 import pathlib
 
-from easydata.data import Catalog
-from easydata.log import logger
+from src.data import Catalog
+from src.log import logger
 
 @pytest.fixture
 def catalog(tmpdir):

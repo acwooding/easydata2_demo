@@ -21,7 +21,7 @@ git merge main  # advanced git users can do a rebase here. Others please merge.
 Next, turn on debugging in your notebook. Add these cells to the top:
 ```
 import logging
-from easydata.log import logger
+from src.log import logger
 
 logger.setLevel(logging.DEBUG)
 ```
@@ -39,9 +39,9 @@ If your problem persists, work through the table below. If these fail to resolve
 | Problem  | Status                    | Fix  |
 | :---          |    :----                             |   :----                             |
 | General weirdness due to not being in the right conda environment  | **Try this first**  | `conda activate easydata2_demo` or change the kernel in your jupyter notebook |
-| Old conda (e.g. `easydata` module is not being installed correctly) | **Try this second**| Upgrade conda to version > 4.8 |
-| `easydata` module not found | **Try this first** | `conda activate easydata2_demo`|
-| `easydata` module still doesn't work | **Try this second** | `touch environment.yml && make update_environment` |
+| Old conda (e.g. `src` module is not being installed correctly) | **Try this second**| Upgrade conda to version > 4.8 |
+| `src` module not found | **Try this first** | `conda activate easydata2_demo`|
+| `src` module still doesn't work | **Try this second** | `touch environment.yml && make update_environment` |
 | Nothing works | Take off and nuke it from orbit | `conda deactivate && make delete_environment && make create_environment`|
 
 ### Other specific troubleshooting FAQ

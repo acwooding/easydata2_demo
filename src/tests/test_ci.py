@@ -2,10 +2,10 @@
 import logging
 import unittest
 
-from easydata.data import Dataset
-from easydata import workflow
-from easydata.log import logger
-import easydata.log.debug
+from src.data import Dataset
+from src import workflow
+from src.log import logger
+import src.log.debug
 
 
 class TestDatasetsSmall(unittest.TestCase):

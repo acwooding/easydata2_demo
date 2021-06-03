@@ -1,5 +1,5 @@
 import unittest
-import easydata.log.debug
+import src.log.debug
 
 
 class TestImports(unittest.TestCase):

@@ -1,8 +1,8 @@
 ## Test dataset information
 import unittest
 
-from easydata.data import Dataset
-import easydata.log.debug
+from src.data import Dataset
+import src.log.debug
 
 
 class TestDatasets(unittest.TestCase):

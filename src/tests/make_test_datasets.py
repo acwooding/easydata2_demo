@@ -1,10 +1,10 @@
 from sklearn.datasets import fetch_20newsgroups
 from functools import partial
 
-from easydata.data import DataSource, Dataset, DatasetGraph, Catalog
-from easydata import workflow, paths
-from easydata.log import logger
-import easydata.log.debug
+from src.data import DataSource, Dataset, DatasetGraph, Catalog
+from src import workflow, paths
+from src.log import logger
+import src.log.debug
 
 # Set up a 20 newsgroups dataset
 

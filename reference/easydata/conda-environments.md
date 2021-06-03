@@ -44,7 +44,7 @@ make create_environment
 conda activate easydata2_demo
 make update_environment
 ```
-**Note**: When creating the environment the first time, you really do need to run **both** `make create_environment` and `make update_environment` for the `easydata` module to install correctly.
+**Note**: When creating the environment the first time, you really do need to run **both** `make create_environment` and `make update_environment` for the `src` module to install correctly.
 
 To activate the environment, simply `conda activate easydata2_demo`
 
@@ -106,7 +106,7 @@ Now, we'll admit that this workflow isn't perfectly reproducible in the sense th
 #### Using your conda environment in a jupyter notebook
 If you make a new notebook, select the `easydata2_demo` environment from within the notebook. If you are somehow in another kernel, select **Kernel -> Change kernel -> Python[conda env:easydata2_demo]**. If you don't seem to have that option, make sure that you ran `jupyter notebooks` with the `easydata2_demo` conda environment enabled, and that `which jupyter` points to the correct (`easydata2_demo`) version of jupyter.
 
-If you want your environment changes (or `easydata` module edits) to be immediately available in your running notebooks, make sure to run a notebook cell containing
+If you want your environment changes (or `src` module edits) to be immediately available in your running notebooks, make sure to run a notebook cell containing
 ```
 %load_ext autoreload
 %autoreload 2
